@@ -1,0 +1,14 @@
+body {
+ background-color: black;
+}
+.eyeball
+{
+ width: 600px;
+ height: 600px;
+ background: url(images/eye.jpg) no-repeat;
+}
+.eyeball:hover {
+ width: 600px;
+ height: 600px;
+ background: url(images/appleye.png) no-repeat;
+ }
