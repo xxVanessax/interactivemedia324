@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title>A House of Dust</title>
+ 
+ <!-- 
+ ***** START CSS ***** 
+ -->
+ <style>
+  /* You can change the colors, font, and so on below */
+  body {
+   margin: 75px;
+   font-size: 20px;
+   text-transform: uppercase;
+   font-family: "Segoe UI Light", sans-serif ;
+   background-image: linear-gradient(-90deg, black, white);
+  }
+  .list-one {
+  }
+  .list-two {
+   text-indent: 1em;
+  }
+  .list-three {
+   text-indent: 2em;
+  }
+  .list-four {
+   text-indent: 3em;
+  }
+  p {
+   margin-bottom: 2em;
+  }
+ </style>
+ <!-- 
+ ***** END CSS ***** 
+ -->
+
+ <!-- 
+ ***** START JAVASCRIPT ***** 
+ -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <script type="text/javascript">
+  $(document).ready(function() {
+   // list one content
+   var one = [
+    "a street full of trees",
+    "a tree full of branches",
+    "a sky full of clouds",
+    "a bench full of bodies",
+    "a cloud full of rain",
+    "a building full of cracked windows",
+    "a sink full of blood",
+    "a door full of nails",
+    "a shirt full of holes",
+    "a cup full of cracks",
+    "a car full of bottles",
+    "a swing full of smiles",
+    "a coat full of money",
+    "a sidewalk full of steps",
+    "a flower full of beauty",
+    "a dog full of joy",
+    "a slide full of memories"
+   ];
+   // list two content
+   var two = [
+    "in a cloudy sky",
+    "in a quiet place",
+    "on a chilly night",
+    "at the cheerful celebration",
+    "during a sleepy afternoon",
+    "on a peaceful morning",
+    "during the full moon",
+    "at this energetic party",
+    "in this empty room",
+    "in this uncomfortable situation",
+    "in this lonely field",
+    "during this sleepless night",
+    "on a happy day",
+    "in this depressed state of mind",
+    "on a helpless journey",
+    "during a hurtful break up",
+    "in an average town",
+    "on a dizzy rollercoaster",
+    "in your jealous rage",
+    "at the awful reception",
+    "in a bad environment",
+    "on a selfish mission",
+    "during that annoying presentation",
+    "at that repulsive venue",
+    "during this delightful year",
+   ];
+   // list three content
+   var three = [
+    "whispering",
+    "running",
+    "falling",
+    "smiling",
+    "laughing"
+   ];
+   // list four content
+   var four = [
+    "and crying",
+    "and breaking",
+    "and shouting",
+    "and scratching",
+    "and kicking",
+    "and apologizing",
+    "and arguing",
+    "and attacking",
+    "and admiring",
+    "and disappearing",
+    "and biting",
+    "and destroying",
+    "and taunting",
+    "and protecting",
+    "and pulling",
+    "and wondering",
+    "and perishing",
+    "and obeying",
+    "and listening",
+    "and lying",
+    "and freezing",
+    "and exploring"
+   ];
+   // This is a very common randomizing function.
+   // It takes a list (array) and returns one at random.
+   function select_random(x){
+    y = x[Math.floor(Math.random()*x.length)];
+    return y;
+   }
+   // This is the generator function
+   function generate(){
+    // Select a random item from each list
+    var selected_one = select_random(one);
+    var selected_two = select_random(two);
+    var selected_three = select_random(three);
+    var selected_four = select_random(four);
+    // Make a paragraph and then add the selected (random) item from each list list
+    $('body').append('<p>');
+    $('body').append('<div class="list-one">' + selected_one + '</div>');
+    $('body').append('<div class="list-two">' + selected_two + '</div>');
+    $('body').append('<div class="list-three">' + selected_three + '</div>');
+    $('body').append('<div class="list-four">' + selected_four + '</div>');
+    $('body').append('</p>');
+   }
+   // Run the generator every two seconds ("2000" in the code below)
+   function timeout() {
+       setTimeout(function () {
+           generate();
+           timeout();
+       }, 2000);
+   }
+   generate();
+   timeout();
+   
+  });
+ </script>
+ <!-- 
+ ***** END JAVASCRIPT ***** 
+ -->
+</head>
+<body>
+ <!--
+ This is the visible portion.
+ If you want your words or phrases to go side-by-side, change...
+ <div></div>
+ to
+ <span></span>
+ in the code below.
+ -->
+</body>
+</html>
