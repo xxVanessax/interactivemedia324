@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cage the Cage</title>
+<style type="text/css">
+	body {
+		background-image: url("page3.png");
+		background-repeat: repeat;
+		background-color: #B3B3B3; 
+		background-size: auto;
+		background-position: center;
+	}
+
+#draggable {
+	position: absolute;
+	z-index: -1;
+	top: 500px;
+	right: 100px;
+}
+
+.cage {
+  height: 10px;
+  width: 10px;
+	margin-top: 100px;
+	margin-left: 100px;
+}
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  font-family: Impact;
+  margin: 4px 2px;
+  width: 120px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  position: relative;
+  left: 45%;
+  border-radius: 10px;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.button2 {
+    border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  font-family: Impact;
+  margin: 2px 2px;
+  width: 120px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  position: relative;
+  left: 45%;
+  border-radius: 10px;
+}
+
+.button2:hover {
+    background-color: black;
+    color: white;
+
+}
+
+
+.question {
+  text-align: center;
+  font-family: Impact;
+  font-size: 53px;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+
+</style>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+ 
+</head>
+
+
+<body>
+
+
+<div class="cage"><img src="images/cage1.png" id="image"></div>
+<script>
+  	var description = [
+  "images/cage1.png",
+  "images/cage2.png",
+  "images/cage3.png",
+  "images/cage4.png",
+];
+
+var size = description.length
+var x = Math.floor(size*Math.random())
+document.getElementById('image').src=description[x];
+  </script>
+
+  
+
+<div id="draggable" class="ui-widget-content">
+  <img src="images/cage/cage5.png" id="face">
+</div>
+<script>
+  	var description = [
+  "images/cage/cage1.png",
+  "images/cage/cage2.png",
+  "images/cage/cage3.png",
+  "images/cage/cage4.png",
+  "images/cage/cage5.png",
+  "images/cage/cage6.png",
+  "images/cage/cage7.png",
+  "images/cage/cage8.png",
+];
+
+var size = description.length
+var x = Math.floor(size*Math.random())
+document.getElementById('face').src=description[x];
+  </script>
+  <p class="question">Have you caged the cage?</p>
+ 
+<script>
+    $(document).ready(function() {
+        var obj = document.createElement("audio");
+        obj.src="cagequote.mp3";
+        obj.volume=1.00;
+        obj.autoPlay=false;
+        obj.preLoad=true;       
+ 
+        $(".button2").click(function() {
+            obj.play();
+        });
+ 
+    });
+</script>
+ <button class="button">Yes</button>
+ <button class="button2">No</button>
+ <audio id="sound" preload="auto">
+   <source src="cagequote" type="mp3">
+ </audio>
+ <script>    
+  $('.button').click(function() {
+    location.reload();
+});
+  $('.button2').click(function(){
+    $("body").css('background-image', 'url(page4.png)')
+  });
+   
+</script>
+
+<script>
+    
+</script>
+</body> 
+
+</html>
