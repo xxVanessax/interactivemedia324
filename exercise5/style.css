@@ -1,0 +1,58 @@
+body {
+background-color: black;
+color: white;
+font-family: sans-serif;
+}
+a {
+ text-decoration: none;
+ color: white;
+}
+a:hover {
+ color: #00FFFF;
+}
+.eevee {
+position: relative;
+margin-top:70px;
+}
+.jolteon {
+position: relative;
+margin-top:20px;
+}
+.flareon {
+position: relative;
+margin-top:5px;
+}
+.vaporeon {
+position: relative;
+margin-top:5px;
+margin-left: 550px;
+}
+.umbreon {
+position: relative;
+margin-top:20px;
+}
+.espeon {
+position: relative;
+margin-top:20px;
+}
+.leafeon {
+position: relative;
+margin-top:20px;
+}
+.glaceon {
+position: relative;
+margin-top:20px;
+}
+.sylveon {
+position: relative;
+margin-top:20px;
+margin-left: 600px;
+}
+.name {
+ margin-top: 200px;
+ font-size: 50px;
+}
+.vanessa {
+ margin-top: 200px;
+ font-size: 50px;
+}
