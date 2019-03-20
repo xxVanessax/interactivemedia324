@@ -96,6 +96,14 @@ a:hover {
 	opacity: 1;
 } 
 
+.r {
+	color: purple;
+}
+
+.r:hover ~ .r, .r:hover {
+	color: red;
+} 
+
 
 /* hover states for images */
 
@@ -159,19 +167,19 @@ p#image-paragraph #image-4 {
 
 .slide-in {
 	opacity: 0;
-	-webkit-transform: translate(400px, 0);
+	-webkit-transform: translate(0px, 400px);
 }
 
 /* when you hover on #paragraph-3, we're adjusting the x position of the .slide-out text, and .slide-in */
 
 #sliding-paragraph:hover .slide-out {
 	opacity: 0;
-	-webkit-transform: translate(-400px, 0);
+	-webkit-transform: translate(0px, -400px);
 }
 
 #sliding-paragraph:hover .slide-in {
 	opacity: 1;
-	-webkit-transform: translate(0px, 0);
+	-webkit-transform: translate(0px, 0px);
 }
 
 
